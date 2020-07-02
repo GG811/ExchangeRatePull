@@ -1,17 +1,17 @@
 package cn.breakbad.exchangerate.executor
 
-import cn.breakbad.exchangerate.ISO
+import java.util.*
 
 public interface ExchangeRateExecutor {
 
-    fun getExchangeRate(target: ISO, to: ISO): Double?
+    fun getExchangeRate(target: Currency, to: Currency): Double?
 
-    fun getExchangeRate(target: ISO, vararg tos: ISO): Map<ISO, Double>? {
+    fun getExchangeRate(target: Currency, vararg tos: Currency): Map<Currency, Double>? {
         return getExchangeRate(target, tos.asList())
     }
 
-    fun getExchangeRate(target: ISO, tos: List<ISO>): Map<ISO, Double>?
+    fun getExchangeRate(target: Currency, tos: List<Currency>): Map<Currency, Double>?
 
-    fun getAllExchangeRate(target: ISO): Map<ISO, Double>?
+    fun getAllExchangeRate(target: Currency): Map<Currency, Double>?
 
 }
