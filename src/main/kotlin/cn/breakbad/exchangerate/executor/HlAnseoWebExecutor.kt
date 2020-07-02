@@ -1,14 +1,18 @@
 package cn.breakbad.exchangerate.executor
 
 import cn.breakbad.exchangerate.ISO
+import java.net.URL
 
 /**
  * 抓取http://hl.anseo.cn/网址数据
  */
 public open class HlAnseoWebExecutor : ExchangeRateExecutor {
 
+    private val betweenRegex:Regex by lazy { Regex("当前汇率：</strong>(.*?)</p><p>") }
+
     override fun getExchangeRate(target: ISO, to: ISO): Double? {
-        return null
+        val responseContent = URL(getBetweenRateUrl(target, to)).readText()
+        return betweenRegex.find(responseContent)?.groupValues?.last()?.toDoubleOrNull()
     }
 
     override fun getExchangeRate(target: ISO, tos: List<ISO>): Map<ISO, Double>? {
