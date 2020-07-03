@@ -4,13 +4,23 @@ A library for obtaining exchange rates
 
 use [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code
 
+[中文文档](https://github.com/GG811/ExchangeRatePull/blob/master/README_zh.md)
+
 ## Usage
 
 Download the latest JAR or grab from Maven central at the coordinates 
 ```
-todo upload maven
+// gralde
+implementation "com.github.gg811:pull-exchangerate:0.0.1"
 ```
-
+```
+// pom
+<dependency>
+  <groupId>com.github.gg811</groupId>
+  <artifactId>pull-exchangerate</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
 ### Get ExchangeRate
 
 

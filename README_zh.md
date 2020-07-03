@@ -2,13 +2,22 @@
 
 一个获取汇率的类库
 
-使用 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 代码
+使用 [ISO 4217](https://zh.wikipedia.org/wiki/ISO_4217) 币种代码
 
 ## 使用
 
 下载最新的JAR或者从 Maven central中引入
 ```
-todo upload maven
+// gralde
+implementation "com.github.gg811:pull-exchangerate:0.0.1"
+```
+```
+// pom
+<dependency>
+  <groupId>com.github.gg811</groupId>
+  <artifactId>pull-exchangerate</artifactId>
+  <version>0.0.1</version>
+</dependency>
 ```
 
 ### 使用示例
