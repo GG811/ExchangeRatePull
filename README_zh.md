@@ -1,20 +1,21 @@
 # ExchangeRatePull
 
-A library for obtaining exchange rates
+一个获取汇率的类库
 
-use [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code
+使用 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 代码
 
-## Usage
+## 使用
 
-Download the latest JAR or grab from Maven central at the coordinates 
+下载最新的JAR或者从 Maven central中引入
 ```
 todo upload maven
 ```
 
-### Get ExchangeRate
+### 使用示例
 
 
-Between two countries
+获取两个币种之间的汇率
+
 ```
 // kotlin
 val exchangeRate = ExchangeRate()
@@ -30,9 +31,11 @@ System.out.println(rate);
 
 ```
 
-One country to many countries
+
+获取一个币种对多个币种的汇率
 
 ```
+// kotlin
 val exchangeRate = ExchangeRate()
 val target = Currency.getInstance(Locale.US)
 val arrayTos = listOf(Currency.getInstance("CNY"),
@@ -43,10 +46,11 @@ val rate:Map<Currency,Double>? = exchangeRate.getExchangeRate(target, arrayTos)
  
 ```
 
-All exchange rates of a country
+获取一个币种对所有币种的汇率
 
 
 ```
+// kotlin
 val exchangeRate = ExchangeRate()
 val target = Currency.getInstance(Locale.CHINA)
 val allRate:Map<Currency,Double>? = exchangeRate.getAllExchangeRate(target)
