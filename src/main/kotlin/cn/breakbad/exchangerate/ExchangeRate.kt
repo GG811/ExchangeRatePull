@@ -1,5 +1,6 @@
 package cn.breakbad.exchangerate
 
+import cn.breakbad.exchangerate.executor.ERROR_EXCHANGE_RATE
 import cn.breakbad.exchangerate.executor.ExchangeRateExecutor
 import cn.breakbad.exchangerate.executor.HlAnseoWebExecutor
 import cn.breakbad.exchangerate.util.CurrencyUtil
@@ -10,8 +11,8 @@ public open class ExchangeRate(private var exchangeRateExecutor: ExchangeRateExe
     private val currencyUtil: CurrencyUtil by lazy { CurrencyUtil() }
 
     open fun getExchangeRate(targetCurrencyCode: String, toCurrencyCode: String): Double {
-        val target = currencyUtil.getCurrency(targetCurrencyCode) ?: return exchangeRateExecutor.errorExchangeRate
-        val to = currencyUtil.getCurrency(toCurrencyCode) ?: return exchangeRateExecutor.errorExchangeRate
+        val target = currencyUtil.getCurrency(targetCurrencyCode) ?: return ERROR_EXCHANGE_RATE
+        val to = currencyUtil.getCurrency(toCurrencyCode) ?: return ERROR_EXCHANGE_RATE
         return getExchangeRate(target, to)
     }
 

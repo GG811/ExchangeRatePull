@@ -1,6 +1,8 @@
 # ExchangeRatePull
 
-a library for obtaining exchange rates
+A library for obtaining exchange rates
+
+use [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code
 
 ## Usage
 
@@ -11,12 +13,20 @@ todo upload maven
 
 ### Get ExchangeRate
 
+
 Between two countries
 ```
+// kotlin
 val exchangeRate = ExchangeRate()
-val target = Currency.getInstance(Locale.US)
-val to  = Currency.getInstance("CNY")
-val rate:Double? = exchangeRate.getExchangeRate(target,to)
+val rate = exchangeRate.getExchangeRate("ALL", "ANG")
+println(rate)
+
+```
+```
+// java
+ExchangeRate exchangeRate = new ExchangeRate();
+double rate = exchangeRate.getExchangeRate("ALL","ANG");
+System.out.println(rate);
 
 ```
 

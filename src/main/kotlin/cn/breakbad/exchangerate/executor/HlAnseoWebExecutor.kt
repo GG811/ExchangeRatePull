@@ -14,7 +14,7 @@ public open class HlAnseoWebExecutor : ExchangeRateExecutor {
 
     override fun getExchangeRate(target: Currency, to: Currency): Double {
         val responseContent = URL(getBetweenRateUrl(target, to)).readText()
-        return betweenRegex.find(responseContent)?.groupValues?.last()?.toDoubleOrNull()?:errorExchangeRate
+        return betweenRegex.find(responseContent)?.groupValues?.last()?.toDoubleOrNull()?:ERROR_EXCHANGE_RATE
     }
 
     override fun getExchangeRate(target: Currency, tos: List<Currency>): Map<Currency, Double> {

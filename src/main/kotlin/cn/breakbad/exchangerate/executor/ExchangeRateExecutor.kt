@@ -2,10 +2,10 @@ package cn.breakbad.exchangerate.executor
 
 import java.util.*
 
+const val  ERROR_EXCHANGE_RATE: Double = (-1).toDouble()
+
 public interface ExchangeRateExecutor {
 
-    val errorExchangeRate: Double
-        get() = (-1).toDouble()
 
     fun getExchangeRate(target: Currency, to: Currency): Double
 

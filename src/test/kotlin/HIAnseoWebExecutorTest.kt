@@ -1,3 +1,4 @@
+import cn.breakbad.exchangerate.executor.ERROR_EXCHANGE_RATE
 import cn.breakbad.exchangerate.executor.HlAnseoWebExecutor
 import junit.framework.TestCase
 import org.junit.Test
@@ -10,7 +11,7 @@ class HIAnseoWebExecutorTest {
     fun testGetExchangeRateSingle() {
         val rate = exchangeRateExecutor.getExchangeRate(Currency.getInstance("CNY")
                 , Currency.getInstance(Locale.US))
-        TestCase.assertTrue(rate!=exchangeRateExecutor.errorExchangeRate)
+        TestCase.assertTrue(rate!= ERROR_EXCHANGE_RATE)
     }
 
     @Test
