@@ -2,7 +2,7 @@
 
 一个获取汇率的类库
 
-使用 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 代码
+使用 [ISO 4217](https://zh.wikipedia.org/wiki/ISO_4217) 币种代码
 
 ## 使用
 

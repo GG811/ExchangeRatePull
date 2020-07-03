@@ -4,6 +4,8 @@ A library for obtaining exchange rates
 
 use [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code
 
+[中文文档](https://github.com/GG811/ExchangeRatePull/blob/master/README_zh.md)
+
 ## Usage
 
 Download the latest JAR or grab from Maven central at the coordinates 
