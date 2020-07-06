@@ -13,8 +13,12 @@ public interface ExchangeRateExecutor {
         return getExchangeRate(target, tos.asList())
     }
 
-    fun getExchangeRate(target: Currency, tos: List<Currency>): Map<Currency, Double>
+    fun getExchangeRate(target: Currency, tos: List<Currency>): Map<Currency, Double>{
+        return mapOf()
+    }
 
-    fun getAllExchangeRate(target: Currency): Map<Currency, Double>
+    fun getAllExchangeRate(target: Currency): Map<Currency, Double>{
+        return mapOf()
+    }
 
 }
