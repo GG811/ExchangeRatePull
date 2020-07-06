@@ -65,3 +65,10 @@ val target = Currency.getInstance(Locale.CHINA)
 val allRate:Map<Currency,Double>? = exchangeRate.getAllExchangeRate(target)
 
 ```
+
+### 执行器说明
+
+executor | url | 支持多查询
+---|---|---
+HIAnseWebExecutor | http://hl.anseo.cn | true
+IP138WebExecutor | https://qq.ip138.com/hl.asp | false
